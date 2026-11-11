@@ -6,12 +6,14 @@ import { UsersModule } from './users/users.module.js';
 import { ConfigModule } from '@nestjs/config';
 
 export const { ObserveModule, ObserveInstrument } = createObserveModule();
-ConfigModule.forRoot({
-isGlobal: true,
-})
+
 
 @Module({
+  
   imports: [
+    ConfigModule.forRoot({
+isGlobal: true,
+}),
     ObserveModule.forRoot({
       serviceId: 'firstproject1',
     }),

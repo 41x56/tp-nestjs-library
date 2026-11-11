@@ -7,7 +7,7 @@ async function bootstrap() {
     instrument: ObserveInstrument,});
 
   const config = app.get(ConfigService);
-const port = Number(config.get<string>('PORT') ?? '3000');
+const port = Number(config.get<string>('PORT') ?? '3001');
 await app.listen(port);
 console.log(`Application running on http://localhost:${port}`);
 }
